@@ -34,11 +34,30 @@ section {
 
 
 .logo:nth-child(2) {
-    transition-delay: 200ms;
-}
-.logo:nth-child(3) {
     transition-delay: 400ms;
 }
-.logo:nth-child(4) {
+.logo:nth-child(3) {
     transition-delay: 600ms;
 }
+.logo:nth-child(4) {
+    transition-delay: 800ms;
+}
+
+.button {
+    background-color: #303030;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    width: 1000px;
+  }
+  .button:hover {
+    background-color: #ffffff;
+    color: #303030
+  }
+  
+  .button1 {border-radius: 2px;}

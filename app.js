@@ -14,3 +14,10 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden')
 hiddenElements.forEach((el) => observer.observe(el));
+
+$("#1").click(function() {
+    window.open(
+    'http://www.w3schools.com',
+    '_blank' // <- This makes it open in a new window.
+    );
+});
