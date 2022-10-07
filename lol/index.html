@@ -1,25 +1,78 @@
-
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Rickroll</title>
-		<link href="/lol/rickroll.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="http://www.parsecdn.com/js/parse-1.2.18.min.js"></script>
-    <script src="/public/js/historyboard.js"></script>
-    <!--script src="public/js/ideas.js"></script-->
-    
- </head>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
- <body>
-    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    
-  <div class="background-video-wrapper">
-      <video id="background-video" loop preload="auto" autoplay>
-          <source src="/lol/rolled.webm" type="video/webm">
-      </video>
-  </div>
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
 
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
 
-  
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<video autoplay loop id="myVideo">
+  <source src="rolled.webm" type="video/webm">  
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1>haha noob</h1>
+  <p>Imagine getting rickrolled can't relate L + Bozo.</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
